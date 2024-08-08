@@ -1,0 +1,722 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.18f1 (d29bea25151d) revision 13802474'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 8084 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Program Files (x86)\Unity\Unity 2022.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Game project/CSCI356/CSCI 356 Game Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59774
+Successfully changed project path to: D:/Game project/CSCI356/CSCI 356 Game Project
+D:/Game project/CSCI356/CSCI 356 Game Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [10384] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1445827883 [EditorId] 1445827883 [Version] 1048832 [Id] WindowsEditor(7,Isaac-ck1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [10384] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1445827883 [EditorId] 1445827883 [Version] 1048832 [Id] WindowsEditor(7,Isaac-ck1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 11.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.18f1 (d29bea25151d)
+[Subsystems] Discovering subsystems at path D:/Program Files (x86)/Unity/Unity 2022.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Game project/CSCI356/CSCI 356 Game Project/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 with Max-Q Design (ID=0x1c20)
+    Vendor:   NVIDIA
+    VRAM:     6052 MB
+    Driver:   30.0.14.7212
+Initialize mono
+Mono path[0] = 'D:/Program Files (x86)/Unity/Unity 2022.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files (x86)/Unity/Unity 2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Program Files (x86)/Unity/Unity 2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files (x86)/Unity/Unity 2022.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Program Files (x86)/Unity/Unity 2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007543 seconds.
+- Loaded All Assemblies, in  0.563 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.468 seconds
+Domain Reload Profiling: 1031ms
+	BeginReloadAssembly (214ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (209ms)
+		LoadAssemblies (213ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (205ms)
+			TypeCache.Refresh (202ms)
+				TypeCache.ScanAssembly (181ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (468ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (387ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (108ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (186ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.620 seconds
+Refreshing native plugins compatible for Editor in 3.10 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.911 seconds
+Domain Reload Profiling: 2530ms
+	BeginReloadAssembly (277ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (67ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (1183ms)
+		LoadAssemblies (1089ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (279ms)
+			TypeCache.Refresh (241ms)
+				TypeCache.ScanAssembly (215ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (912ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (682ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (35ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (93ms)
+			ProcessInitializeOnLoadAttributes (514ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 4.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3093 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.4 KB). Loaded Objects now: 3559.
+Memory consumption went from 128.0 MB to 127.9 MB.
+Total: 4.676900 ms (FindLiveObjects: 0.453800 ms CreateObjectMapping: 0.393400 ms MarkObjects: 3.681600 ms  DeleteObjects: 0.147000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1479805.812361 seconds.
+  path: Assets/DMStudios/Chests/Materials
+  artifactKey: Guid(8e73270639edb8a48bdb6eb4f0a90782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Materials using Guid(8e73270639edb8a48bdb6eb4f0a90782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2ec96690d289c9497a6de257fa37a6e') in 0.005505 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.011375 seconds.
+  path: Assets/DMStudios/Chests/Materials/Chest_1.mat
+  artifactKey: Guid(c1bccbf470baaf647b4560017efcd87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Materials/Chest_1.mat using Guid(c1bccbf470baaf647b4560017efcd87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46b4a988bb0a2cce8c795aa3281eaa3f') in 0.237483 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/DMStudios/Chests/Materials/Treasure.mat
+  artifactKey: Guid(59133d0145558e146a77799e37a5f09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Materials/Treasure.mat using Guid(59133d0145558e146a77799e37a5f09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1202b924401de2750cb94b7e96df06f') in 0.060519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/DMStudios/Chests/Materials/Chest_1_Simple.mat
+  artifactKey: Guid(2b5aad12601e2b54188860b6a0dbfec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Materials/Chest_1_Simple.mat using Guid(2b5aad12601e2b54188860b6a0dbfec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5e1467120ef91b7d5d4f47b0ba365f') in 0.045449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 5.146500 seconds.
+  path: Assets/DMStudios/Chests/Meshes/Background.fbx
+  artifactKey: Guid(f34f89539c2e3ba409f5d8b230d66ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Meshes/Background.fbx using Guid(f34f89539c2e3ba409f5d8b230d66ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82bacb7b16ea20eb6f64b0706580c4b3') in 0.202722 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/DMStudios/Chests/Meshes/Chest_2.fbx
+  artifactKey: Guid(fd2e46d56c0f2c943b93496113c0fb34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Meshes/Chest_2.fbx using Guid(fd2e46d56c0f2c943b93496113c0fb34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1076870765e4240a875360097911b813') in 0.086860 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/DMStudios/Chests/Meshes/Treasure_1.fbx
+  artifactKey: Guid(8bef12c322bd512408cceb71295e909e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Meshes/Treasure_1.fbx using Guid(8bef12c322bd512408cceb71295e909e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693a02b1b88b46aab9672ab941d60ecd') in 0.099027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 29.808451 seconds.
+  path: Assets/DMStudios/Chests/Textures/chest_1.png
+  artifactKey: Guid(cea27b7a61c6a9c4d8534bb5e67b864d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Textures/chest_1.png using Guid(cea27b7a61c6a9c4d8534bb5e67b864d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f36b448608d4d60f6276589d314820e3') in 0.164716 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/DMStudios/Chests/Textures/chest_2.png
+  artifactKey: Guid(6925ecd2866c0dd46b96e90e152654af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Textures/chest_2.png using Guid(6925ecd2866c0dd46b96e90e152654af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f08d18382e77a11fa9ac98c861a8550') in 0.057324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/DMStudios/Chests/Textures/chest_3.png
+  artifactKey: Guid(250ac9fb149ae8d4a877e60ed1973a77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DMStudios/Chests/Textures/chest_3.png using Guid(250ac9fb149ae8d4a877e60ed1973a77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf7dce672f765afd5c69bcadaaf4af66') in 0.030380 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 192.801633 seconds.
+  path: Assets/Prefabs/Chests/Textures
+  artifactKey: Guid(eb7dc43e9ca7c4643926aba0d713059f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Chests/Textures using Guid(eb7dc43e9ca7c4643926aba0d713059f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a273b90fa987fde82aa170efe8a10e1b') in 0.003493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 27.385813 seconds.
+  path: Assets/Prefabs/Chests/Prefabs/Shaded
+  artifactKey: Guid(834c2a2b014815c43aad1c1d63e44aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Chests/Prefabs/Shaded using Guid(834c2a2b014815c43aad1c1d63e44aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bd16fbf7099b120ac2e6432f1f6b897') in 0.000834 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 123.301103 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/bridge.obj
+  artifactKey: Guid(6cf9e6a13ccf36144b856f9e55db78e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/bridge.obj using Guid(6cf9e6a13ccf36144b856f9e55db78e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49588b6948f43667a2049b2059cccfd3') in 0.075011 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-castle.obj
+  artifactKey: Guid(775f542983979354982720290083a865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-castle.obj using Guid(775f542983979354982720290083a865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ca5a42b9febf4677869201aec6e4474') in 0.145932 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 13.237571 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-farm.obj
+  artifactKey: Guid(2dbd5f5c97fe69e4cbb8cc152aa87d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-farm.obj using Guid(2dbd5f5c97fe69e4cbb8cc152aa87d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ce3f05e217ecb627e6dd5e5e94a35f') in 0.041622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.024105 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-house.obj
+  artifactKey: Guid(69a5ebaeec6eb444b9a76c32d52a1129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-house.obj using Guid(69a5ebaeec6eb444b9a76c32d52a1129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37e15d801740bc5ad79147a975d7a79') in 0.049569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 78.356026 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Previews/bridge.png
+  artifactKey: Guid(ef35bde4f2d2b924f996451f837868e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Previews/bridge.png using Guid(ef35bde4f2d2b924f996451f837868e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693a80e78042a1412064eefbddfe7369') in 0.032305 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Previews/building-farm.png
+  artifactKey: Guid(a6062ec53e7918e43a5a9241820253fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Previews/building-farm.png using Guid(a6062ec53e7918e43a5a9241820253fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66aca626ad3f759eebdba79287afd7c7') in 0.025074 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Previews/building-market.png
+  artifactKey: Guid(944baf64e1104774f8c4c7404973eefb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Previews/building-market.png using Guid(944baf64e1104774f8c4c7404973eefb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27fedb42c3732e67051ad3aa5466b069') in 0.028227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Previews/building-house.png
+  artifactKey: Guid(8d1be7a15c8df7d428fa8f2ee499ece0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Previews/building-house.png using Guid(8d1be7a15c8df7d428fa8f2ee499ece0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8600282096be3c8b55ed6e6f54bd0a0f') in 0.031871 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Previews/building-port.png
+  artifactKey: Guid(e7afa1ee8b8151040a07333e985eaff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Previews/building-port.png using Guid(e7afa1ee8b8151040a07333e985eaff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93c55f451beddb7d05466311a30d77ca') in 0.039421 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Previews/building-dock.png
+  artifactKey: Guid(4ac2a9809610d5b47a76d1e167c616b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Previews/building-dock.png using Guid(4ac2a9809610d5b47a76d1e167c616b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e4a7598ad23602809c81b2ccea9df7') in 0.029506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Previews/building-cabin.png
+  artifactKey: Guid(a574c70a9b4d1464f934a673b266baa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Previews/building-cabin.png using Guid(a574c70a9b4d1464f934a673b266baa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bae072126988b86c29c36e13fd7cc85') in 0.041773 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 3.938880 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/Textures/variation-a.png
+  artifactKey: Guid(593b35d3308ec0f46ba8cbbbbda18a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/Textures/variation-a.png using Guid(593b35d3308ec0f46ba8cbbbbda18a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4db9297ab14bed71b48789b7eebd9d1') in 0.065128 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 6.057252 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/Textures/colormap.png
+  artifactKey: Guid(1627d9e7ab51f8f47801530706df4b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/Textures/colormap.png using Guid(1627d9e7ab51f8f47801530706df4b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24f9eac10a9e809428c15879245fefda') in 0.025882 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 9.498043 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-mill.obj
+  artifactKey: Guid(fd897c9b9bb5ad3499d0c132cf1adac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-mill.obj using Guid(fd897c9b9bb5ad3499d0c132cf1adac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97d13ec071fadc118036d849c3d2b6bd') in 0.063337 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 1.675938 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-port.obj
+  artifactKey: Guid(46491eb92edd330439a0b8a16bfd885e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-port.obj using Guid(46491eb92edd330439a0b8a16bfd885e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ed587a11904cd7d9400567ee4ab8387') in 0.063136 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-village.obj
+  artifactKey: Guid(977a92736ac05fa439eff90c634f030e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-village.obj using Guid(977a92736ac05fa439eff90c634f030e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1d4aeb543590f58cffd57fdad80f45f') in 0.051187 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-tower.obj
+  artifactKey: Guid(8783f3459a0363f408878b9a5c530a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-tower.obj using Guid(8783f3459a0363f408878b9a5c530a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ede01958d200fcc3ce662937e795a46') in 0.045994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.759720 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-wall.obj
+  artifactKey: Guid(0767a948136f8ee4a96bfc30eac96743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-wall.obj using Guid(0767a948136f8ee4a96bfc30eac96743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27cb27ca458d9fb0c03355f83ccce90') in 0.050201 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/building-watermill.obj
+  artifactKey: Guid(0fdcd98883e7dd74c9042860832cd8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/building-watermill.obj using Guid(0fdcd98883e7dd74c9042860832cd8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd1de99d3a40d42c162c3d3ca9016515') in 0.068082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/dirt-lumber.obj
+  artifactKey: Guid(008ffd4a3aaa67244944c9675b68ab17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/dirt-lumber.obj using Guid(008ffd4a3aaa67244944c9675b68ab17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ecaa2db821bcd476991456f5a7e1733') in 0.063977 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.203777 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/grass.obj
+  artifactKey: Guid(1c38716bf6e62d242934f9ed9e782cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/grass.obj using Guid(1c38716bf6e62d242934f9ed9e782cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '466526b29d5348e1d0781812789ed011') in 0.052961 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/grass-hill.obj
+  artifactKey: Guid(98d41a12a2edb0642869f6ae729adc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/grass-hill.obj using Guid(98d41a12a2edb0642869f6ae729adc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba0f08eab94b15aff6adae38e1fa309') in 0.059229 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/path-crossing.obj
+  artifactKey: Guid(73a379f19d52e774cbc4334fa485a54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/path-crossing.obj using Guid(73a379f19d52e774cbc4334fa485a54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7829b3d919220629f2d5f91f53068015') in 0.060402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/path-end.obj
+  artifactKey: Guid(e9f864209c010f343819c87aa2f69cfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/path-end.obj using Guid(e9f864209c010f343819c87aa2f69cfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '917022693ff1e4cff9261c328b12cecd') in 0.044259 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.087332 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/path-intersectionA.obj
+  artifactKey: Guid(7ddf7b2fc21011d4d8b982053b5519fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/path-intersectionA.obj using Guid(7ddf7b2fc21011d4d8b982053b5519fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25eb220b52c82c1cc6ad162d8b86714b') in 0.047903 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/path-intersectionG.obj
+  artifactKey: Guid(c942af22159d323418b55bcbded320a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/path-intersectionG.obj using Guid(c942af22159d323418b55bcbded320a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926cb49db6391490b755bf4910d3a1d9') in 0.081972 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/path-intersectionD.obj
+  artifactKey: Guid(bb9889fb30f91604293544622b3ba088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/path-intersectionD.obj using Guid(bb9889fb30f91604293544622b3ba088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f636fb27059f26fbdc9b0cbb2e95a6da') in 0.067861 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.027525 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/path-square.obj
+  artifactKey: Guid(942c5b90d6eba20438839e98a0a740bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/path-square.obj using Guid(942c5b90d6eba20438839e98a0a740bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd85421503a985b5ac8a83b626bcb2a') in 0.048981 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/path-start.obj
+  artifactKey: Guid(06bba28e22b5c0048af4f1077569bbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/path-start.obj using Guid(06bba28e22b5c0048af4f1077569bbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28e21c1c8a0f441e7deb78d3a5de218f') in 0.065937 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/river-crossing.obj
+  artifactKey: Guid(e94bf2b7f673d594d96febb828b34901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/river-crossing.obj using Guid(e94bf2b7f673d594d96febb828b34901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ab3d643aa81cb00312831715f607f8') in 0.060734 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/river-corner-sharp.obj
+  artifactKey: Guid(882a05efff9e65f46963cc637855323e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/river-corner-sharp.obj using Guid(882a05efff9e65f46963cc637855323e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '289f68808a7750eef7474c0c0628bf58') in 0.041006 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 1.268888 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/river-end.obj
+  artifactKey: Guid(0de33c2232889e045a3c66e6f320b7ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/river-end.obj using Guid(0de33c2232889e045a3c66e6f320b7ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '325a45a2b2f8eea867bcb8d601da6c0a') in 0.092955 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/river-intersectionB.obj
+  artifactKey: Guid(20206450dce5bf944917720742bca843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/river-intersectionB.obj using Guid(20206450dce5bf944917720742bca843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65b583d7d2113ae3b614060ea0b669f8') in 0.044763 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.192642 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/river-intersectionF.obj
+  artifactKey: Guid(4f913473c31d1e5478aa7e9b835bf930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/river-intersectionF.obj using Guid(4f913473c31d1e5478aa7e9b835bf930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbff0667bb1f686bfa08d7a165f79bcf') in 0.049795 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.037111 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/river-intersectionH.obj
+  artifactKey: Guid(54a87aec6907f4a44ae3b6a49a2a1bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/river-intersectionH.obj using Guid(54a87aec6907f4a44ae3b6a49a2a1bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64e01d1ae86c20f546c1c299bb685228') in 0.051600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/sand-desert.obj
+  artifactKey: Guid(a6a7e521c60af25449aff03d0384eeb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/sand-desert.obj using Guid(a6a7e521c60af25449aff03d0384eeb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b389d1de0d1d084343c9e35f7b5ccce2') in 0.046599 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/sand.obj
+  artifactKey: Guid(5e02bb760a65c4e47abd7a8b61a1d2ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/sand.obj using Guid(5e02bb760a65c4e47abd7a8b61a1d2ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150b8f01a3489bd6cb130be8fd3fc714') in 0.041479 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.427940 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/sand-rocks.obj
+  artifactKey: Guid(3f5b6da211bd11744ace1e7f2239d400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/sand-rocks.obj using Guid(3f5b6da211bd11744ace1e7f2239d400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca5e8cb481ffcecac1fd6153d5d49359') in 0.057397 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/stone-hill.obj
+  artifactKey: Guid(b31af32dbf6c8b5408b84455c7826dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/stone-hill.obj using Guid(b31af32dbf6c8b5408b84455c7826dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46196199cfe1aaf939a58426a2be7105') in 0.067941 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/unit-house.obj
+  artifactKey: Guid(5a756c6b36029b34d893ff3471e9a40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/unit-house.obj using Guid(5a756c6b36029b34d893ff3471e9a40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012a73009a8fee422f4d33c002b35409') in 0.046442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.260850 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/unit-mill.obj
+  artifactKey: Guid(bd799660078a23c4280360cb1b7f886d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/unit-mill.obj using Guid(bd799660078a23c4280360cb1b7f886d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd408ee8af857f3d46f41b925377eb7e1') in 0.066243 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/unit-tree.obj
+  artifactKey: Guid(ffc8744e3d8b1904283d0188e615f7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/unit-tree.obj using Guid(ffc8744e3d8b1904283d0188e615f7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dc989127e259db3c0f2ac1ba6f086fc') in 0.047731 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/unit-tower.obj
+  artifactKey: Guid(84c793294aa5e694c979807e771d8ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/unit-tower.obj using Guid(84c793294aa5e694c979807e771d8ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd7a9afca2efdd0fe4b71dc4e10b7fc') in 0.047362 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/unit-wall-tower.obj
+  artifactKey: Guid(f24f9aeaf4df38840b4031b7a012089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/unit-wall-tower.obj using Guid(f24f9aeaf4df38840b4031b7a012089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952b406dd7360263c4dad61b3d352d94') in 0.042631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.187703 seconds.
+  path: Assets/Prefabs/Hexagon Terrain/OBJ format/water-rocks.obj
+  artifactKey: Guid(565a8a744e28cca4fb4fc90c4d22670f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hexagon Terrain/OBJ format/water-rocks.obj using Guid(565a8a744e28cca4fb4fc90c4d22670f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f49f791c3f396e429dbf9d442d22285') in 0.045906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Prepare
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.478 seconds
+Refreshing native plugins compatible for Editor in 1.41 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.557 seconds
+Domain Reload Profiling: 1040ms
+	BeginReloadAssembly (323ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (104ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (33ms)
+		LoadAssemblies (177ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (17ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (558ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (353ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (35ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (202ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 3.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1246 unused Assets / (0.9 MB). Loaded Objects now: 2359.
+Memory consumption went from 74.4 MB to 73.4 MB.
+Total: 39.594200 ms (FindLiveObjects: 0.636000 ms CreateObjectMapping: 0.530100 ms MarkObjects: 26.079000 ms  DeleteObjects: 12.347700 ms)
+
+Prepare: number of updated asset objects reloaded= 2
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
