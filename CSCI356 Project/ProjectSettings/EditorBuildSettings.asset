@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MaoJunAssets/Scenes/MainMenuScene.unity
+    guid: d0ef1f6c06cdb54469e83591c051361a
+  - enabled: 1
+    path: Assets/MaoJunAssets/Scenes/CharacterSelectScene.unity
+    guid: 7a737f7a5ef916d46aa0740dbc0e18ab
+  - enabled: 1
+    path: Assets/Scenes/Map Scene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
