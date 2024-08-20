@@ -1,31 +1,54 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] Image HowToPlayPopup;
+    [SerializeField] AudioSource music;
+    [SerializeField] AudioSource UISound;
+    void Start()
+    {
+        music = GameObject.Find("Music").GetComponent<AudioSource>();
+        UISound = GameObject.Find("UI Sound").GetComponent<AudioSource>();
+        if (music != null){music.Play();}
+        // don't display the popup on start
+        if (HowToPlayPopup != null)
+        { HowToPlayPopup.gameObject.SetActive(false); }
+    }
     public void NewGame()
     {
-        // Load the CharacterSelectScene
-        //SceneManager.LoadScene("CharacterSelectScene");
-        SceneManager.LoadScene("Map Scene");
+        if (UISound != null) { UISound.Play(); } // play UI sound
+            // Load the CharacterSelectScene
+            SceneManager.LoadScene("CharacterSelectScene");
     }
 
     public void LoadGame()
     {
+        if (UISound != null) { UISound.Play(); } // play UI sound
         // Implement load game logic here
         SceneManager.LoadScene("Map Scene");
     }
 
-    public void HowToPlay()
+    public void openHowToPlay()
     {
-        // Implement how to play instructions (could be a separate scene or popup)
+        if (UISound != null) { UISound.Play(); } // play UI sound
+        // display the how to play popup
+        HowToPlayPopup.gameObject.SetActive(true);
+    }
+    public void closeHowToPlay()
+    {
+        if (UISound != null) { UISound.Play(); } // play UI sound
+        // don't display the how to play popup
+        HowToPlayPopup.gameObject.SetActive(false);
     }
 
 
 
     public void ExitGame()
     {
+        UISound.Play(); // play UI sound
         // Exit the game or stop in unity editor
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -36,6 +59,7 @@ public class MainMenuController : MonoBehaviour
 
     public void BacktoMainMenu()
     {
+        UISound.Play(); // play UI sound
         // Load the MainMenuScene
         SceneManager.LoadScene("MainMenuScene");
     }
