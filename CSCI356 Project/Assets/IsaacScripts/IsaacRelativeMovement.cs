@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))] // enforces dependency on character controller
-public class RelativeMovement : MonoBehaviour
+public class IsaacRelativeMovement : MonoBehaviour
 {
     [SerializeField] Transform target;  // camera
     public float jumpSpeed = 15.0f;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("Control Script/Mouse Look")] // add to the Unity editor's component menu
-public class MouseLook : MonoBehaviour
+public class IsaacMouseLook : MonoBehaviour
 {
     // enum to choose rotation axis in the Unity editor
     public enum RotationAxes

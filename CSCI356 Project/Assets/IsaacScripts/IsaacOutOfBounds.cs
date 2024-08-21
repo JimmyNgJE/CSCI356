@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class OutOfBounds : MonoBehaviour
+public class IsaacOutOfBounds : MonoBehaviour
 {
     [SerializeField] private Transform teleportTarget; // The target location to teleport to
     [SerializeField] private string targetTag = "TeleportTrigger"; // Tag for the objects that trigger teleport

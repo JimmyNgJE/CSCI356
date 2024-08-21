@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class NewBehaviourScript : MonoBehaviour
+public class IsaacExplosion : MonoBehaviour
 {
     public float radius = 5.0f;
     public float power = 10.0f;

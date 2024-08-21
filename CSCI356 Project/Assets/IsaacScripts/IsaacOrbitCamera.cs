@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrbitCamera : MonoBehaviour
+public class IsaacOrbitCamera : MonoBehaviour
 {
     // the orbit target (e.g., the player GameObject)
     [SerializeField] Transform target;

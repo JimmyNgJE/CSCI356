@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateDoor : MonoBehaviour
+public class IsaacRotateDoor : MonoBehaviour
 {
     public Vector3 openRotAngle;    // rotation angle when open
     public Vector3 closeRotAngle;   // rotation angle when closed

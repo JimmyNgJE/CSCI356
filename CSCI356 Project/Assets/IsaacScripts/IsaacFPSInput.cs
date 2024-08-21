@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))] // enforces dependency on character controller
 [AddComponentMenu("Control Script/FPS Input")]  // add to the Unity editor's component menu
-public class FPSInput : MonoBehaviour
+public class IsaacFPSInput : MonoBehaviour
 {
     // movement sensitivity
     public float speed = 6.0f;

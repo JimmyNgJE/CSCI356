@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trigger : MonoBehaviour
+public class IsaacTrigger : MonoBehaviour
 {
     [SerializeField] GameObject[] targets;
     // Start is called before the first frame update    

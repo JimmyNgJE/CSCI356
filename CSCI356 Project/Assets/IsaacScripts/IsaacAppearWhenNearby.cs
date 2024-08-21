@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppearWhenNearby : MonoBehaviour
+public class IsaacAppearWhenNearby : MonoBehaviour
 {
     public GameObject objectToAppear;
     public float appearanceDistance = 1f;

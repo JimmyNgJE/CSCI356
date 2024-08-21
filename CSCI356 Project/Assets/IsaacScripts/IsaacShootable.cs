@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class Shootable : MonoBehaviour
+public class IsaacShootable : MonoBehaviour
 {
         [SerializeField] int health = 10;
         public void SetHealth(int damage)

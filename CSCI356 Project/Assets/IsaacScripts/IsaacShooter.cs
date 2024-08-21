@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public class IsaacShooter : MonoBehaviour
 {
     private Camera cam;     // stores camera component
     public float impulseStrength = 5.0f;
