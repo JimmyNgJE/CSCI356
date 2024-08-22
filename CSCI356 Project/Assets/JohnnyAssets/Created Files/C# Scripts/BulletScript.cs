@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public float life = 3;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -11,8 +13,6 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public float life = 3;
 
     void Awake()
     {
