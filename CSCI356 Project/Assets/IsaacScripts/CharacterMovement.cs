@@ -38,16 +38,27 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // Calculate movement direction and magnitude
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
+        Vector3 movementDirection;
+
+        // Handle backward movement independently of the camera direction
+        if (verticalInput < 0) // Moving backwards
+        {
+            movementDirection = -transform.forward;
+        }
+        else
+        {
+            movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+            // Convert movement direction to world space relative to camera
+            movementDirection = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movementDirection;
+        }
+
+        movementDirection.Normalize();
+
+        // Calculate movement magnitude for animations
+        float inputMagnitude = Mathf.Clamp01(new Vector3(horizontalInput, 0, verticalInput).magnitude);
 
         // Update animator parameter
         animator.SetFloat("InputMagnitude", inputMagnitude, 0.01f, Time.deltaTime);
-
-        // Convert movement direction to world space relative to camera
-        movementDirection = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movementDirection;
-        movementDirection.Normalize();
 
         // Apply gravity
         ySpeed += Physics.gravity.y * Time.deltaTime;
@@ -83,15 +94,16 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(velocity * Time.deltaTime);
 
         // Rotate character towards movement direction
-        if (movementDirection != Vector3.zero)
+        if (verticalInput >= 0 && movementDirection != Vector3.zero)
         {
-            animator.SetBool("IsMoving", true); // Update moving state
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
-        else
+
+        // Ensure character doesn't rotate when moving backwards
+        if (verticalInput < 0)
         {
-            animator.SetBool("IsMoving", false); // Stop moving animation when there's no input
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(-transform.forward), rotationSpeed * Time.deltaTime);
         }
     }
 
