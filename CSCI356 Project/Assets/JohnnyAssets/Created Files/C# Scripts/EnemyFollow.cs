@@ -14,6 +14,8 @@ public class EnemyFollow : MonoBehaviour
     public GameObject Bullet;
     public Transform bulletSpawnPoint;
     public float enemySpeed;
+    public float sightDistance = 10;
+    public float sightAngle = 45;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,30 @@ public class EnemyFollow : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(player.position);
-        HandleShooting();
+        if (CanSeePlayer())
+        {
+            HandleShooting();
+        }
+    }
+
+    bool CanSeePlayer()
+    {
+        Vector3 directionToPlayer = player.position - transform.position;
+        if (Vector3.Angle(transform.forward, directionToPlayer) < sightAngle / 2f)
+        {
+            if (directionToPlayer.magnitude < sightDistance)
+            {
+                RaycastHit hit;
+                if(Physics.Raycast(transform.position, directionToPlayer.normalized, out hit, sightDistance))
+                {
+                    if (hit.transform == player)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     void HandleShooting()

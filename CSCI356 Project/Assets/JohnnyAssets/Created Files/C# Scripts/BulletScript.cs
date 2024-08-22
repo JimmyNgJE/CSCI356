@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
