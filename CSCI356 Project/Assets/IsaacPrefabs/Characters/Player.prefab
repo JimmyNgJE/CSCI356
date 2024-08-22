@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1474969712681742160}
   - component: {fileID: 4596711558211882496}
   - component: {fileID: 2279590358138976145}
-  - component: {fileID: 3711648528077484565}
+  - component: {fileID: 8736963795020819530}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947319027743370399}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.1, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -163,7 +163,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3711648528077484565
+--- !u!114 &8736963795020819530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,13 +172,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1947319027743370399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65420aee4d91d4344a1dff18447e7428, type: 3}
+  m_Script: {fileID: 11500000, guid: 45fd4b5db93e0724b89c593d0a03b3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  jumpSpeed: 15
-  gravity: -9.8
-  terminalVelocity: -20
-  pushForce: 3
-  moveSpeed: 6
-  rotSpeed: 15
+  teleportTarget: {fileID: 0}
+  targetTag: TeleportTrigger
