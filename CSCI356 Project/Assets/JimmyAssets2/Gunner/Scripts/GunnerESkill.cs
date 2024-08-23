@@ -9,6 +9,7 @@ public class GunnerESkill : MonoBehaviour
     public int pelletCount = 8;            // Number of pellets to fire
     public float spreadAngle = 15.0f;      // Spread angle in degrees
     public float pelletSpeed = 100f;       // Speed of each pellet
+    public float pelletLifetime = 5f;      // Time after which the pellet will be destroyed
 
     private bool canUseSkill = true;       // To check if the skill is on cooldown
 
@@ -50,6 +51,9 @@ public class GunnerESkill : MonoBehaviour
                 // Set the velocity of the pellet directly
                 rb.velocity = direction * pelletSpeed;
             }
+
+            // Destroy the pellet after a certain time
+            Destroy(pellet, pelletLifetime);
         }
     }
 }

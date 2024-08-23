@@ -10,6 +10,7 @@ public class JimmyShooter : MonoBehaviour
     public float bulletSpeed = 20.0f; // Speed of the bullet
     public float fireRate = 0.5f;
     public int damage = 10;
+    public float bulletLifetime = 5.0f; // Time after which the bullet will be destroyed
 
     private bool isShooting = false;
 
@@ -67,6 +68,9 @@ public class JimmyShooter : MonoBehaviour
         // Get the Rigidbody component of the bullet and apply force
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.velocity = bulletSpawnPoint.forward * bulletSpeed;
+
+        // Destroy the bullet after a certain time
+        Destroy(bullet, bulletLifetime);
 
         // Raycast to detect what the bullet might hit
         Ray ray = new Ray(bulletSpawnPoint.position, bulletSpawnPoint.forward);

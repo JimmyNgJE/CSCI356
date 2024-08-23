@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7045522355883985848, guid: 5c2c4286cb57d78479c3548405880666, type: 3}
       propertyPath: m_Name
-      value: Ch45_nonPBR Variant
+      value: Slasher
       objectReference: {fileID: 0}
     - target: {fileID: 7677909403768033538, guid: 5c2c4286cb57d78479c3548405880666, type: 3}
       propertyPath: m_LocalPosition.x

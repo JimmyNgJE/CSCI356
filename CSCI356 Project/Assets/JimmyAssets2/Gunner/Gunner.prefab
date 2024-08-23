@@ -477,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c1058c230068caa478c411b654d82c2b, type: 3}
       propertyPath: m_Name
-      value: Ch44_nonPBR (2)
+      value: Gunner
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c1058c230068caa478c411b654d82c2b, type: 3}
       propertyPath: m_IsActive
@@ -693,6 +693,7 @@ MonoBehaviour:
   bulletSpeed: 20
   fireRate: 0.5
   damage: 10
+  bulletLifetime: 5
 --- !u!114 &7682882595133535677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,6 +726,7 @@ MonoBehaviour:
   pelletCount: 8
   spreadAngle: 30
   pelletSpeed: 100
+  pelletLifetime: 5
 --- !u!136 &1562270985303935226
 CapsuleCollider:
   m_ObjectHideFlags: 0
