@@ -208,13 +208,13 @@ PrefabInstance:
       addedObject: {fileID: 8919976560436724889}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78bd8111cc4fb484f9e3fb1dcbe15b72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 143730274218861446}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78bd8111cc4fb484f9e3fb1dcbe15b72, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7589301923476511964}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78bd8111cc4fb484f9e3fb1dcbe15b72, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4180228981405842152}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78bd8111cc4fb484f9e3fb1dcbe15b72, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5225772963757732186}
   m_SourcePrefab: {fileID: 100100000, guid: 78bd8111cc4fb484f9e3fb1dcbe15b72, type: 3}
 --- !u!1 &2677134723274946459 stripped
 GameObject:
@@ -243,26 +243,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &143730274218861446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2677134723274946459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a3e8948b70808f449e10373e4ac94a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 8919976560436724889}
-  player: {fileID: 0}
-  timer: 5
-  Bullet: {fileID: 2998542452881824250, guid: a97feb8a80f39fe4398ac9f0208ecdde, type: 3}
-  bulletSpawnPoint: {fileID: 2789256904234402824}
-  enemySpeed: 2000
-  sightDistance: 10
-  sightAngle: 45
 --- !u!54 &7589301923476511964
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -304,6 +284,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 19
   destructionEffectPrefab: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
+--- !u!114 &5225772963757732186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677134723274946459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f7af3140d7605438436cfa3888751c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 8919976560436724889}
+  player: {fileID: 0}
+  timer: 5
+  Bullet: {fileID: 2998542452881824250, guid: a97feb8a80f39fe4398ac9f0208ecdde, type: 3}
+  bulletSpawnPoint: {fileID: 2789256904234402824}
+  enemySpeed: 2000
+  sightDistance: 10
+  sightAngle: 45
 --- !u!4 &3345267925838392609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78bd8111cc4fb484f9e3fb1dcbe15b72, type: 3}

@@ -20,8 +20,12 @@ public class EnemyFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Find the active player object by tag
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
         shotTimer = timer;
     }
+
 
     // Update is called once per frame
     void Update()

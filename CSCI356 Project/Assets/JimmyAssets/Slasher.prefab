@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7196496705775677142, guid: 34aeb5de31a7d8f409823242affef332, type: 3}
       propertyPath: field of view
-      value: 120
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7196496705775677142, guid: 34aeb5de31a7d8f409823242affef332, type: 3}
       propertyPath: m_projectionMatrixMode
@@ -213,6 +213,10 @@ PrefabInstance:
     - target: {fileID: 7045522355883985848, guid: 5c2c4286cb57d78479c3548405880666, type: 3}
       propertyPath: m_Name
       value: Slasher
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045522355883985848, guid: 5c2c4286cb57d78479c3548405880666, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7677909403768033538, guid: 5c2c4286cb57d78479c3548405880666, type: 3}
       propertyPath: m_LocalPosition.x

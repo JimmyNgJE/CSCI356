@@ -139,7 +139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1c6a5cb4c766b41af0ab993e444b5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000095171345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1c6a5cb4c766b41af0ab993e444b5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -195,13 +195,13 @@ PrefabInstance:
       addedObject: {fileID: 5554624662264624846}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b1c6a5cb4c766b41af0ab993e444b5a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8117593713693642290}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b1c6a5cb4c766b41af0ab993e444b5a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5148958239626765911}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b1c6a5cb4c766b41af0ab993e444b5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5964917559757658149}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b1c6a5cb4c766b41af0ab993e444b5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4244351180631821301}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1c6a5cb4c766b41af0ab993e444b5a, type: 3}
 --- !u!4 &4940506330812997493 stripped
 Transform:
@@ -235,26 +235,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8117593713693642290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754444704311477711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a3e8948b70808f449e10373e4ac94a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 5554624662264624846}
-  player: {fileID: 0}
-  timer: 5
-  Bullet: {fileID: 3235689742801790045, guid: f832dd2e510b39543a144a8eeeab8e2a, type: 3}
-  bulletSpawnPoint: {fileID: 6084407065521867576}
-  enemySpeed: 900
-  sightDistance: 10
-  sightAngle: 45
 --- !u!54 &5148958239626765911
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -296,6 +276,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 19
   destructionEffectPrefab: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
+--- !u!114 &4244351180631821301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754444704311477711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f7af3140d7605438436cfa3888751c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 5554624662264624846}
+  player: {fileID: 0}
+  timer: 5
+  Bullet: {fileID: 3235689742801790045, guid: f832dd2e510b39543a144a8eeeab8e2a, type: 3}
+  bulletSpawnPoint: {fileID: 6084407065521867576}
+  enemySpeed: 900
+  sightDistance: 10
+  sightAngle: 45
 --- !u!1001 &7239764528289777487
 PrefabInstance:
   m_ObjectHideFlags: 0

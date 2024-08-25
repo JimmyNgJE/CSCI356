@@ -124,10 +124,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5015616703131892301}
   - component: {fileID: 4496118458887938137}
-  - component: {fileID: 3350957011432915057}
   - component: {fileID: 968280066083032457}
   - component: {fileID: 3858798273679668931}
   - component: {fileID: 3825664650838197527}
+  - component: {fileID: 9103727415932533806}
   m_Layer: 3
   m_Name: StrongheartBot
   m_TagString: Untagged
@@ -145,7 +145,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9844864, z: 0, w: -0.17546107}
   m_LocalPosition: {x: -8.3, y: 0.09, z: -0.31}
-  m_LocalScale: {x: 0.844857, y: 0.9213827, z: 1}
+  m_LocalScale: {x: 0.8448568, y: 0.9213827, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5614643912237648661}
@@ -176,26 +176,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3350957011432915057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5679281563116855543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a3e8948b70808f449e10373e4ac94a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 4496118458887938137}
-  player: {fileID: 0}
-  timer: 1
-  Bullet: {fileID: 5151850332807753505, guid: e4b85826ef83de641af470a9012390b9, type: 3}
-  bulletSpawnPoint: {fileID: 1887876768292649522}
-  enemySpeed: 1000
-  sightDistance: 7
-  sightAngle: 45
 --- !u!114 &968280066083032457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +232,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   destructionEffectPrefab: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
+--- !u!114 &9103727415932533806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5679281563116855543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f7af3140d7605438436cfa3888751c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4496118458887938137}
+  player: {fileID: 0}
+  timer: 5
+  Bullet: {fileID: 5151850332807753505, guid: e4b85826ef83de641af470a9012390b9, type: 3}
+  bulletSpawnPoint: {fileID: 1887876768292649522}
+  enemySpeed: 1000
+  sightDistance: 7
+  sightAngle: 45
 --- !u!1001 &8809365614097356
 PrefabInstance:
   m_ObjectHideFlags: 0
