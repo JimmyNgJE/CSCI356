@@ -1,72 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Wander : MonoBehaviour
 {
-    public float speed = 3.0f;
-    public float obstacleRange = 5.0f;
-    public float rotSpeed = 10.0f;
+    public NavMeshAgent agent;
+    public Transform player;
+    public float detectionRadius = 50f;
+    public float wanderRadius = 5f;
+    public float wanderTimer = 5f;
 
-    Quaternion direction;       // wandering direction
-    bool isRotating = false;    // rotate over a number of frames
+    private float timer;
 
-    // Start is called before the first frame update
+    public GameObject bulletPrefab; // Assign the bullet prefab in the Inspector
+    public Transform shootingPoint; // The point from where bullets will be shot
+    public float shootingRange = 10f; // Range within which the AI will shoot
+    public float shootingInterval = 2f; // Time between shots
+    public float bulletSpeed = 20f;
+    private float shootingTimer;
+
     void Start()
     {
-        // start in a random direction
-        float angle = Random.Range(-180.0f, 180.0f);
-        direction = Quaternion.LookRotation(Quaternion.Euler(0.0f, angle, 0.0f) * transform.forward);
-        isRotating = true;
+        timer = wanderTimer;
     }
 
-    void OnDrawGizmos()
-    {
-        // draw a red line gizmo to indicate collision avoidance distance
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * obstacleRange);
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        // if the agent is rotating
-        if (isRotating)
-        {
-            // rotate the agent over several frames
-            transform.rotation = Quaternion.Slerp(transform.rotation,
-                                   direction, rotSpeed * Time.deltaTime);
+        // Increment timer and check if it's time to choose a new wander destination
+        timer += Time.deltaTime;
 
-            // if the agent within a certain angle of the correct direction
-            if (Quaternion.Angle(transform.rotation, direction) < 1.0f)
+        if (timer >= wanderTimer)
+        {
+            Wanderer();
+            timer = 0;
+        }
+
+        // Check if the player is within the detection radius
+        if (Vector3.Distance(player.position, transform.position) <= detectionRadius)
+        {
+            // Set the player's position as the destination
+            agent.SetDestination(player.position);
+            //Debug.Log("player detected");
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            if (distanceToPlayer <= shootingRange)
             {
-                isRotating = false;
+                shootingTimer -= Time.deltaTime;
+                if (shootingTimer <= 0f)
+                {
+                    Shoot();
+                    shootingTimer = shootingInterval;
+                }
             }
-        }
-        else
-        {
-            // move the agent
-            transform.Translate(0, 0, speed * Time.deltaTime);
-        }
 
-        // collision avoidance
-        Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
+        }
+    }
 
-        // cast a sphere to check whether it collides with anything
-        if (Physics.SphereCast(ray, 0.75f, out hit))
+    void Wanderer()
+    {
+        // Get a random point on the NavMesh within the wander radius
+        Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+        agent.SetDestination(newPos);
+    }
+
+    Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    {
+        Vector3 randomDirection = Random.insideUnitSphere * dist;
+        randomDirection += origin;
+
+        NavMeshHit navHit;
+        NavMesh.SamplePosition(randomDirection, out navHit, dist, layermask);
+
+        return navHit.position;
+    }
+
+    void Shoot()
+    {
+        if (bulletPrefab != null && shootingPoint != null)
         {
-            // if the collision is within the collision avoidance range
-            if (hit.distance < obstacleRange)
+            GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            if (rb != null)
             {
-                // choose a random angle
-                float angle = Random.Range(-110.0f, 110.0f);
-
-                // set the direction based on the angle
-                direction = Quaternion.LookRotation(Quaternion.Euler(0.0f, angle, 0.0f) * transform.forward);
-                isRotating = true;
+                rb.velocity = shootingPoint.forward * bulletSpeed;
             }
         }
     }
 }
-
