@@ -16,24 +16,25 @@ public class ShortcutController : MonoBehaviour
 
     void Update()
     {
+        // Check if the user presses P or Escape
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
-            if (settingsController != null)
-            {
-                // Pause the game
-                Time.timeScale = 0f;
-                settingsController.openSettings();
-                // Enable the cursor and unlock it
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-            }
-        }
-        // Check if settings menu is active
-        if (settingsPopup.activeSelf){
-            if((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)))
+            // If the settings menu is active, close it and resume the game
+            if (settingsPopup.activeSelf)
             {
                 resumeGame();
                 settingsController.closeSettings();
+            }
+            // If the settings menu is not active, open it and pause the game
+            else
+            {
+                if (settingsController != null)
+                {
+                    Time.timeScale = 0f;
+                    settingsController.openSettings();
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                }
             }
         }
     }
