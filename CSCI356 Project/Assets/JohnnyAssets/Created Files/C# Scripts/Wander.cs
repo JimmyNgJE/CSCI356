@@ -22,6 +22,8 @@ public class Wander : MonoBehaviour
 
     void Start()
     {
+        // Find the active player object by tag
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         timer = wanderTimer;
     }
 

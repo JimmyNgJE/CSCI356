@@ -9,6 +9,8 @@ public class MeleeCombo : MonoBehaviour
     private float lastComboTime = -7f; // Last time the combo was used
 
     public float comboDuration = 2.5f; // Duration for the entire combo animation
+    public float aoeRadius = 5f; // Radius within which damage will be dealt
+    public int aoeDamage = 20; // Amount of damage to deal in the radius
 
     void Start()
     {
@@ -42,9 +44,6 @@ public class MeleeCombo : MonoBehaviour
 
     private void ApplyAOEDamage()
     {
-        float aoeRadius = 5f;
-        int aoeDamage = 20;
-
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, aoeRadius);
 
         foreach (var hitCollider in hitColliders)
@@ -60,6 +59,6 @@ public class MeleeCombo : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 5f);
+        Gizmos.DrawWireSphere(transform.position, aoeRadius);
     }
 }
