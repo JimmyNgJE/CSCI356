@@ -174,6 +174,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2865201914152582084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4916012655447787940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056528504812538697}
+  m_Layer: 0
+  m_Name: BulletSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056528504812538697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4916012655447787940}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04206076, y: -0.19151753, z: -0.45425844, w: 0.8690231}
+  m_LocalPosition: {x: 0, y: -0.519, z: 0.144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 780571684376744174}
+  m_LocalEulerAnglesHint: {x: -14.306, y: -17.703, z: -52.955}
+--- !u!1 &6186755559660901979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3832423296213859092}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3832423296213859092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186755559660901979}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04206076, y: -0.19151753, z: -0.45425844, w: 0.8690231}
+  m_LocalPosition: {x: 0, y: -0.519, z: 0.144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 780571684376744174}
+  m_LocalEulerAnglesHint: {x: -14.306, y: -17.703, z: -52.955}
 --- !u!1 &8944098802382255368
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +645,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6297854906677940197, guid: c1058c230068caa478c411b654d82c2b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8825893199415548874}
+    - targetCorrespondingSourceObject: {fileID: 8700783698680967558, guid: c1058c230068caa478c411b654d82c2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3832423296213859092}
+    - targetCorrespondingSourceObject: {fileID: 8700783698680967558, guid: c1058c230068caa478c411b654d82c2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1056528504812538697}
     - targetCorrespondingSourceObject: {fileID: 234480625599603528, guid: c1058c230068caa478c411b654d82c2b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7365540029336673759}
@@ -612,6 +680,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2251225688557288754}
   m_SourcePrefab: {fileID: 100100000, guid: c1058c230068caa478c411b654d82c2b, type: 3}
+--- !u!4 &780571684376744174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8700783698680967558, guid: c1058c230068caa478c411b654d82c2b, type: 3}
+  m_PrefabInstance: {fileID: 8244473963097514344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6553800922242273651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6297854906677940197, guid: c1058c230068caa478c411b654d82c2b, type: 3}
@@ -711,8 +784,8 @@ MonoBehaviour:
   impulseStrength: 5
   particleSystemPrefab: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00, type: 3}
   bulletPrefab: {fileID: 1000012964112300, guid: 8306882d88a96b64291460c8d7664f4d, type: 3}
-  bulletSpawnPoint: {fileID: 6875262369793668510}
-  bulletSpeed: 50
+  bulletSpawnPoint: {fileID: 3832423296213859092}
+  bulletSpeed: 100
   fireRate: 0.5
   damage: 10
   bulletLifetime: 2
@@ -729,12 +802,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pelletPrefab: {fileID: 1000012964112300, guid: 8306882d88a96b64291460c8d7664f4d, type: 3}
-  firePoint: {fileID: 7338045788196708271}
+  firePoint: {fileID: 1056528504812538697}
   skillCooldown: 7
-  pelletCount: 8
-  spreadAngle: 30
+  pelletCount: 20
+  spreadAngle: 10
   pelletSpeed: 100
   pelletLifetime: 2
+  damage: 20
+  particleSystemPrefab: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
 --- !u!136 &1562270985303935226
 CapsuleCollider:
   m_ObjectHideFlags: 0
