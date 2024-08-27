@@ -16,6 +16,8 @@ public class IsaacOrbitCamera : MonoBehaviour
     private float rotX;
     private Vector3 velocity = Vector3.zero; // For smoothing position
 
+    public GameObject settingsPopup; // Reference to the settings popup GameObject
+
     void Start()
     {
         rotY = transform.eulerAngles.y;
@@ -24,6 +26,11 @@ public class IsaacOrbitCamera : MonoBehaviour
 
     void LateUpdate()
     {
+        // Check if settings menu is active
+        if (settingsPopup.activeSelf)
+        {
+            return; // Skip processing if settings menu is open
+        }
         // Update rotation based on mouse input
         rotY += Input.GetAxis("Mouse X") * rotSpeed;
         rotX -= Input.GetAxis("Mouse Y") * rotSpeed;

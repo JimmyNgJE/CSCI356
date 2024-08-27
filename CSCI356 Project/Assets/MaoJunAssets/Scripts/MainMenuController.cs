@@ -48,7 +48,7 @@ public class MainMenuController : MonoBehaviour
 
     public void ExitGame()
     {
-        UISound.Play(); // play UI sound
+        if (UISound != null) { UISound.Play(); } // play UI sound
         // Exit the game or stop in unity editor
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -59,7 +59,7 @@ public class MainMenuController : MonoBehaviour
 
     public void BacktoMainMenu()
     {
-        UISound.Play(); // play UI sound
+        if (UISound != null) { UISound.Play(); } // play UI sound
         // Load the MainMenuScene
         SceneManager.LoadScene("MainMenuScene");
     }

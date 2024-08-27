@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private float? jumpButtonPressedTime;
     private bool isJumping;
 
+    public GameObject settingsPopup; // Reference to the settings popup GameObject
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -35,6 +37,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // Check if settings menu is active
+        if (settingsPopup.activeSelf)
+        {
+            return; // Skip processing if settings menu is open
+        }
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 

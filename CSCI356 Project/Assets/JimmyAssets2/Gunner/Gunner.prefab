@@ -143,6 +143,7 @@ MonoBehaviour:
   height: 2
   positionDamping: 0.1
   rotationDamping: 0.1
+  settingsPopup: {fileID: 0}
 --- !u!1 &2178329727819516786
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +680,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1058c230068caa478c411b654d82c2b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2251225688557288754}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1058c230068caa478c411b654d82c2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9140957129289575560}
   m_SourcePrefab: {fileID: 100100000, guid: c1058c230068caa478c411b654d82c2b, type: 3}
 --- !u!4 &780571684376744174 stripped
 Transform:
@@ -861,3 +865,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+--- !u!114 &9140957129289575560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9127433817155394617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fd4b5db93e0724b89c593d0a03b3ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportTarget: {fileID: 8494061705303623299}
+  targetTag: TeleportTrigger
