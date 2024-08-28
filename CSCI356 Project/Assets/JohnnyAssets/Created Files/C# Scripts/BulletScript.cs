@@ -8,9 +8,10 @@ public class BulletScript : MonoBehaviour
     private Health targetHealth;
     public float life = 3;
 
-    private void Start()
+    void Start()
     {
         targetObject = GameObject.FindWithTag("Player");
+        targetHealth = targetObject.GetComponent<Health>();
     }
 
     void OnTriggerEnter(Collider other)

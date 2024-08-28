@@ -7,7 +7,13 @@ public class Shootable : MonoBehaviour
 {
     [SerializeField] int health = 10;
     [SerializeField] GameObject destructionEffectPrefab;
-
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+    void Start()
+    {
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
+    }
     public void SetHealth(int damage)
     {
         health -= damage;
@@ -15,8 +21,11 @@ public class Shootable : MonoBehaviour
         if (health <= 0)
         {
             HandleDestruction();
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
             Debug.Log("Object destroyed.");
+            
+            Invoke("respawnShootable", 5.0f);
         }
     }
 
@@ -32,5 +41,12 @@ public class Shootable : MonoBehaviour
 
             Debug.Log("Destruction effect instantiated and will be destroyed after 5 seconds.");
         }
+    }
+    void respawnShootable()
+    {
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+        gameObject.SetActive(true);
+        health = 100;
     }
 }
