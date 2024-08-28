@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            currentHealth = 100;
+            currentHealth = maxHealth;
             mapSettingsController.UpdateDeathDisplay();
             gameOverController.ShowYouDieText();
             TeleportPlayer(teleportTarget.position);
