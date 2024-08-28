@@ -33,19 +33,16 @@ public class Shootable : MonoBehaviour
         if (destructionEffectPrefab != null)
         {
             // Instantiate the effect at the object's position and rotation
-            
+            GameObject effect = Instantiate(destructionEffectPrefab, transform.position, transform.rotation);
 
             // Destroy the effect after 5 seconds
-            
+            Destroy(effect, 5f);
 
             Debug.Log("Destruction effect instantiated and will be destroyed after 5 seconds.");
         }
     }
     void respawnShootable()
     {
-        GameObject effect = Instantiate(destructionEffectPrefab, transform.position, transform.rotation);
-        Destroy(effect, 5f);
-
         transform.position = initialPosition;
         transform.rotation = initialRotation;
         gameObject.SetActive(true);
