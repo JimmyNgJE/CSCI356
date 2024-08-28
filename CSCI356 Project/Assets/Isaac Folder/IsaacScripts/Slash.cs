@@ -71,13 +71,21 @@ public class Slash : MonoBehaviour
 
         foreach (Collider col in hitColliders)
         {
-            // Check if the collider belongs to a Shootable object
+            // Check if the collider belongs to a Shootable object or ShootableBoss
             Shootable shootable = col.GetComponent<Shootable>();
+            ShootableBoss shootableBoss = col.GetComponent<ShootableBoss>();
+
             if (shootable != null)
             {
-                // Apply damage
+                // Apply damage to Shootable
                 shootable.SetHealth(damage);
                 Debug.Log($"Damaged {col.name} for {damage} damage.");
+            }
+            else if (shootableBoss != null)
+            {
+                // Apply damage to ShootableBoss
+                shootableBoss.SetHealth(damage);
+                Debug.Log($"Damaged {col.name} (Boss) for {damage} damage.");
             }
         }
     }

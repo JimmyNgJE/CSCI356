@@ -117,6 +117,24 @@ public class GunnerESkill : MonoBehaviour
 
                 Destroy(gameObject); // Destroy the pellet upon collision
             }
+            else
+            {
+                // Check for ShootableBoss if Shootable is not found
+                ShootableBoss bossTarget = other.GetComponent<ShootableBoss>();
+                if (bossTarget != null)
+                {
+                    bossTarget.SetHealth(damage);
+
+                    // Instantiate particle effect at the point of collision
+                    if (particleEffectPrefab != null)
+                    {
+                        GameObject effect = Instantiate(particleEffectPrefab, transform.position, Quaternion.identity);
+                        Destroy(effect, 1f); // Adjust duration as needed
+                    }
+
+                    Destroy(gameObject); // Destroy the pellet upon collision
+                }
+            }
         }
     }
 }
