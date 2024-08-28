@@ -9,22 +9,24 @@ public class GameSelect : MonoBehaviour
     string difficultySelection;
     void Start()
     {
-        if (GameSelect2.Instance != null) {
-        characterSelection = GameSelect2.Instance.SelectedCharacter;
-        difficultySelection = GameSelect2.Instance.SelectedDifficulty;
-        }
-        // Deactivate both characters first
-        character1.SetActive(false);
-        character2.SetActive(false);
-        // Instantiate or activate the selected character and difficulty
-        // Activate the selected character
-        if (characterSelection == "Character1")
+        if (GameSelect2.Instance != null)
         {
-            character1.SetActive(true);
-        }
-        else
-        {
-            character2.SetActive(true);
+            characterSelection = GameSelect2.Instance.SelectedCharacter;
+            difficultySelection = GameSelect2.Instance.SelectedDifficulty;
+
+            // Deactivate both characters first
+            character1.SetActive(false);
+            character2.SetActive(false);
+            // Instantiate or activate the selected character and difficulty
+            // Activate the selected character
+            if (characterSelection == "Character1")
+            {
+                character1.SetActive(true);
+            }
+            else
+            {
+                character2.SetActive(true);
+            }
         }
     }
 

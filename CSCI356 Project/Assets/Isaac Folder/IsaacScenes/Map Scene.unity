@@ -791,7 +791,7 @@ PrefabInstance:
     - target: {fileID: 1007439785075080446, guid: 48f7a70a02811604fb391984a7bb4be2, type: 3}
       propertyPath: character2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1464003881}
     - target: {fileID: 2547278414499426410, guid: 48f7a70a02811604fb391984a7bb4be2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 449.86072
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 1282714461}
     - target: {fileID: 5788048352165241133, guid: 48f7a70a02811604fb391984a7bb4be2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12759,19 +12759,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1378967972189266341, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: settingsPopup
+      value: 
+      objectReference: {fileID: 487040269}
+    - target: {fileID: 1832024606427212804, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: settingsPopup
+      value: 
+      objectReference: {fileID: 487040269}
     - target: {fileID: 1996608575567292175, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: m_Name
       value: Gunner 1
       objectReference: {fileID: 0}
     - target: {fileID: 1996608575567292175, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5693616961199795496, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7347189265487293772, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: teleportTarget
+      value: 
+      objectReference: {fileID: 2135721218}
+    - target: {fileID: 7347189265487293772, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: gameOverController
+      value: 
+      objectReference: {fileID: 1295403950}
+    - target: {fileID: 7347189265487293772, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: mapSettingsController
+      value: 
+      objectReference: {fileID: 919638465}
     - target: {fileID: 7614117734564770183, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: settingsPopup
+      value: 
+      objectReference: {fileID: 487040269}
+    - target: {fileID: 7700343187743724358, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: settingsPopup
+      value: 
+      objectReference: {fileID: 487040269}
+    - target: {fileID: 8201417750639185444, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: settingsPopup
       value: 
       objectReference: {fileID: 487040269}
@@ -12780,6 +12808,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+--- !u!1 &1464003881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1996608575567292175, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+  m_PrefabInstance: {fileID: 1464003880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1467153494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9000204313870624868, guid: 67770448e0e3db8438e336f692f5220b, type: 3}
@@ -16353,6 +16386,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76144616144781024, guid: 3350e07bdce4e994fbb50d1478697847, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 664566477659174945, guid: 3350e07bdce4e994fbb50d1478697847, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -16393,9 +16430,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 782966955530999675, guid: 3350e07bdce4e994fbb50d1478697847, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2537084295040610399, guid: 3350e07bdce4e994fbb50d1478697847, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3351757055101594377, guid: 3350e07bdce4e994fbb50d1478697847, type: 3}
       propertyPath: m_AnchorMax.x
@@ -16555,7 +16596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963828246041195930, guid: 3350e07bdce4e994fbb50d1478697847, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20884,8 +20925,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302808814542851285, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1423322731445240691, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
+      propertyPath: settingsPopup
+      value: 
+      objectReference: {fileID: 487040269}
     - target: {fileID: 1828269146981488239, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 62.5
@@ -20942,6 +20987,14 @@ PrefabInstance:
       propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6181080973012106883, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
+      propertyPath: settingsPopup
+      value: 
+      objectReference: {fileID: 487040269}
+    - target: {fileID: 7022305729978189370, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
+      propertyPath: settingsPopup
+      value: 
+      objectReference: {fileID: 487040269}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

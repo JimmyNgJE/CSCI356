@@ -17,6 +17,8 @@ public class GunnerESkill : MonoBehaviour
 
     private bool canUseSkill = true;       // To check if the skill is on cooldown
 
+    public GameObject settingsPopup; // settings popup GameObject to pause
+
     void Start()
     {
         // Add and configure the AudioSource for skill sound
@@ -26,6 +28,11 @@ public class GunnerESkill : MonoBehaviour
 
     void Update()
     {
+        // Check if settings menu is active
+        if (settingsPopup.activeSelf)
+        {
+            return; // Skip processing if settings menu is open
+        }
         if (Input.GetKeyDown(KeyCode.E) && canUseSkill)
         {
             StartCoroutine(UseSkill());

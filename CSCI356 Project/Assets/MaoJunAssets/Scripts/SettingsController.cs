@@ -21,6 +21,7 @@ public class SettingsController : MonoBehaviour
             UISound = GameObject.Find("UI Sound").GetComponent<AudioSource>();
         }
         volumeSlider.value = AudioListener.volume*10;
+        volumeTMPText.text = (AudioListener.volume * 10).ToString("0");
         // Add a listener to the slider to call OnVolumeSliderChange whenever the value changes
         volumeSlider.onValueChanged.AddListener(delegate { OnVolumeSliderChange(volumeSlider.value); });
     }
@@ -48,6 +49,12 @@ public class SettingsController : MonoBehaviour
     public void BacktoMainMenu()
     {
         if (UISound != null) { UISound.Play(); } // play UI sound
+        // Optionally destroy the singleton if needed
+        if (GameSelect2.Instance != null)
+        {
+            Destroy(GameSelect2.Instance.gameObject);
+            Debug.Log("GameSelect2 Singleton Destroyed");
+        }
         // Load the MainMenuScene
         SceneManager.LoadScene("MainMenuScene");
     }

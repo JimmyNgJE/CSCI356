@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MeleeCombo : MonoBehaviour
+public class SlasherESkill : MonoBehaviour
 {
     private Animator animator;
     private bool isAttacking = false;
@@ -15,6 +15,8 @@ public class MeleeCombo : MonoBehaviour
     public AudioClip comboSound; // Audio clip for the combo
     private AudioSource audioSource; // Audio source for playing the sound
 
+    public GameObject settingsPopup; // settings popup GameObject to pause
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -23,6 +25,11 @@ public class MeleeCombo : MonoBehaviour
 
     void Update()
     {
+        // Check if settings menu is active
+        if (settingsPopup.activeSelf)
+        {
+            return; // Skip processing if settings menu is open
+        }
         if (Input.GetKeyDown(KeyCode.E) && Time.time >= lastComboTime + comboCooldown)
         {
             if (!isAttacking)

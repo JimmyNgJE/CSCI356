@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class JimmyShooter : MonoBehaviour
+public class GunnerShooter : MonoBehaviour
 {
     public float impulseStrength = 5.0f;
     public GameObject particleSystemPrefab;
@@ -15,6 +15,8 @@ public class JimmyShooter : MonoBehaviour
     private AudioSource gunAudioSource; // Specific AudioSource for the gun
 
     private bool isShooting = false;
+
+    public GameObject settingsPopup; // settings popup GameObject to pause
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,11 @@ public class JimmyShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if settings menu is active
+        if (settingsPopup.activeSelf)
+        {
+            return; // Skip processing if settings menu is open
+        }
         // On left mouse button click
         if (Input.GetMouseButtonDown(0) && !isShooting)
         {

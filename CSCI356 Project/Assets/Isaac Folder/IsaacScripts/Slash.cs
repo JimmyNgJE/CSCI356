@@ -12,6 +12,8 @@ public class Slash : MonoBehaviour
     private bool isAttacking = false;
     private AudioSource audioSource;
 
+    public GameObject settingsPopup; // settings popup GameObject to pause
+
     void Start()
     {
         // Get or add an AudioSource component
@@ -20,6 +22,11 @@ public class Slash : MonoBehaviour
 
     void Update()
     {
+        // Check if settings menu is active
+        if (settingsPopup.activeSelf)
+        {
+            return; // Skip processing if settings menu is open
+        }
         if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             StartCoroutine(SlashRoutine());

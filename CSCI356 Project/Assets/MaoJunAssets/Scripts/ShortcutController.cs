@@ -12,6 +12,7 @@ public class ShortcutController : MonoBehaviour
         {
             settingsController = FindObjectOfType<SettingsController>();
         }
+        resumeGame();
     }
 
     void Update()

@@ -8,12 +8,20 @@ public class HealingSkill : MonoBehaviour
 
     private bool isCooldown = false;
 
+    public GameObject settingsPopup; // settings popup GameObject to pause
+
     void Update()
     {
+        // Check if settings menu is active
+        if (settingsPopup.activeSelf)
+        {
+            return; // Skip processing if settings menu is open
+        }
         if (Input.GetKeyDown(KeyCode.Q) && !isCooldown)
         {
             StartCoroutine(ActivateHealing());
         }
+
     }
 
     private IEnumerator ActivateHealing()
