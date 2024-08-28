@@ -14,6 +14,7 @@ public class SlasherESkill : MonoBehaviour
 
     public AudioClip comboSound; // Audio clip for the combo
     private AudioSource audioSource; // Audio source for playing the sound
+    public float volume = 1.0f; // Volume level
 
     public GameObject settingsPopup; // settings popup GameObject to pause
 
@@ -21,6 +22,7 @@ public class SlasherESkill : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.volume = volume; // Set the initial volume
     }
 
     void Update()
@@ -49,7 +51,7 @@ public class SlasherESkill : MonoBehaviour
         // Play the combo sound
         if (comboSound != null && audioSource != null)
         {
-            audioSource.PlayOneShot(comboSound);
+            audioSource.PlayOneShot(comboSound, volume);
         }
 
         yield return new WaitForSeconds(comboDuration);

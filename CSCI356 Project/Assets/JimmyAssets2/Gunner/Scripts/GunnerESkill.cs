@@ -12,18 +12,22 @@ public class GunnerESkill : MonoBehaviour
     public float pelletLifetime = 5f;      // Time after which the pellet will be destroyed
     public int damage = 50;                // Damage to be dealt
     public GameObject particleSystemPrefab; // Particle effect prefab for hits
-    public AudioClip skillSound; // Skill sound clip
-    private AudioSource skillAudioSource; // Specific AudioSource for the skill
+    public AudioClip skillSound;           // Skill sound clip
+    private AudioSource skillAudioSource;  // Specific AudioSource for the skill
+
+    [Range(0f, 1f)]
+    public float volume = 1.0f; // Volume level for the skill sound
 
     private bool canUseSkill = true;       // To check if the skill is on cooldown
 
-    public GameObject settingsPopup; // settings popup GameObject to pause
+    public GameObject settingsPopup;       // Settings popup GameObject to pause
 
     void Start()
     {
         // Add and configure the AudioSource for skill sound
         skillAudioSource = gameObject.AddComponent<AudioSource>();
         skillAudioSource.clip = skillSound;
+        skillAudioSource.volume = volume; // Set initial volume
     }
 
     void Update()
@@ -33,6 +37,7 @@ public class GunnerESkill : MonoBehaviour
         {
             return; // Skip processing if settings menu is open
         }
+
         if (Input.GetKeyDown(KeyCode.E) && canUseSkill)
         {
             StartCoroutine(UseSkill());
@@ -44,7 +49,10 @@ public class GunnerESkill : MonoBehaviour
         canUseSkill = false;
 
         // Play the skill sound
-        skillAudioSource.Play();
+        if (skillSound != null)
+        {
+            skillAudioSource.Play();
+        }
 
         // Fire pellets with a spread pattern
         FirePellets();

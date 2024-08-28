@@ -14,6 +14,9 @@ public class GunnerShooter : MonoBehaviour
     public AudioClip gunshotSound; // Gunshot sound clip
     private AudioSource gunAudioSource; // Specific AudioSource for the gun
 
+    [Range(0f, 1f)]
+    public float volume = 1.0f; // Volume level for the gunshot sound
+
     private bool isShooting = false;
 
     public GameObject settingsPopup; // settings popup GameObject to pause
@@ -28,6 +31,7 @@ public class GunnerShooter : MonoBehaviour
         // Add and configure the AudioSource for gunshots
         gunAudioSource = gameObject.AddComponent<AudioSource>();
         gunAudioSource.clip = gunshotSound;
+        gunAudioSource.volume = volume; // Set the initial volume
     }
 
     void OnGUI()
@@ -85,8 +89,11 @@ public class GunnerShooter : MonoBehaviour
         // Destroy the bullet after a certain time
         Destroy(bullet, bulletLifetime);
 
-        // Play the gunshot sound
-        gunAudioSource.Play();
+        // Play the gunshot sound with the specified volume
+        if (gunshotSound != null)
+        {
+            gunAudioSource.PlayOneShot(gunshotSound, volume);
+        }
 
         // Raycast to detect what the bullet might hit
         Ray ray = new Ray(bulletSpawnPoint.position, bulletSpawnPoint.forward);

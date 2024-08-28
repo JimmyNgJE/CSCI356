@@ -9,15 +9,19 @@ public class Slash : MonoBehaviour
     public float slashRadius = 2f;            // Radius for detecting hits
     public AudioClip slashSound;              // Sound to play when slashing
 
+    [Range(0f, 1f)]
+    public float volume = 1.0f;               // Volume level for the slash sound
+
     private bool isAttacking = false;
     private AudioSource audioSource;
 
-    public GameObject settingsPopup; // settings popup GameObject to pause
+    public GameObject settingsPopup;          // settings popup GameObject to pause
 
     void Start()
     {
         // Get or add an AudioSource component
         audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.volume = volume;          // Set the initial volume
     }
 
     void Update()
@@ -27,6 +31,7 @@ public class Slash : MonoBehaviour
         {
             return; // Skip processing if settings menu is open
         }
+
         if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             StartCoroutine(SlashRoutine());
@@ -37,10 +42,10 @@ public class Slash : MonoBehaviour
     {
         isAttacking = true;
 
-        // Play the slash sound
+        // Play the slash sound with the specified volume
         if (slashSound != null)
         {
-            audioSource.PlayOneShot(slashSound);
+            audioSource.PlayOneShot(slashSound, volume);
         }
 
         // Trigger the slash animation
