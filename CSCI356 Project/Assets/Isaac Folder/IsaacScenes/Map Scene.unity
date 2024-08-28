@@ -12887,7 +12887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc80711e589eea4f8aefae26604db4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 300
   destructionEffectPrefab: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
 --- !u!1 &1359844340
 GameObject:
@@ -14097,6 +14097,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1378967972189266341, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378967972189266341, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: settingsPopup
       value: 
       objectReference: {fileID: 487040269}
@@ -14110,7 +14114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1996608575567292175, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2207555185023817089, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: teleportTarget
@@ -14152,6 +14156,10 @@ PrefabInstance:
       propertyPath: settingsPopup
       value: 
       objectReference: {fileID: 487040269}
+    - target: {fileID: 8201417750639185444, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8201417750639185444, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: settingsPopup
       value: 
@@ -23064,7 +23072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302808814542851285, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1423322731445240691, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
       propertyPath: settingsPopup
@@ -23130,6 +23138,10 @@ PrefabInstance:
       propertyPath: settingsPopup
       value: 
       objectReference: {fileID: 487040269}
+    - target: {fileID: 2930430874870383330, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2930430874870383330, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
       propertyPath: settingsPopup
       value: 
@@ -23320,7 +23332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc80711e589eea4f8aefae26604db4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 250
   destructionEffectPrefab: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
 --- !u!1001 &7179418079485702912
 PrefabInstance:
@@ -23530,7 +23542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc80711e589eea4f8aefae26604db4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 200
   destructionEffectPrefab: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

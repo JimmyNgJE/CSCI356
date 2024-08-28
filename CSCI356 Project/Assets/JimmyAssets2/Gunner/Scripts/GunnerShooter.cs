@@ -101,13 +101,23 @@ public class GunnerShooter : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
+            // Check for Shootable
             Shootable target = hit.transform.GetComponent<Shootable>();
-
             if (target != null)
             {
                 target.SetHealth(damage);
             }
+            else
+            {
+                // Check for ShootableBoss if Shootable is not found
+                ShootableBoss bossTarget = hit.transform.GetComponent<ShootableBoss>();
+                if (bossTarget != null)
+                {
+                    bossTarget.SetHealth(damage);
+                }
+            }
 
+            // Generate particle system at the point of hit
             StartCoroutine(GeneratePS(hit));
         }
     }

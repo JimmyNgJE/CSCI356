@@ -68,9 +68,17 @@ public class SlasherESkill : MonoBehaviour
         foreach (var hitCollider in hitColliders)
         {
             Shootable target = hitCollider.GetComponent<Shootable>();
+            ShootableBoss bossTarget = hitCollider.GetComponent<ShootableBoss>();
+
             if (target != null)
             {
                 target.SetHealth(aoeDamage);
+                Debug.Log($"Damaged {hitCollider.name} for {aoeDamage} damage.");
+            }
+            else if (bossTarget != null)
+            {
+                bossTarget.SetHealth(aoeDamage);
+                Debug.Log($"Damaged {hitCollider.name} (Boss) for {aoeDamage} damage.");
             }
         }
     }
