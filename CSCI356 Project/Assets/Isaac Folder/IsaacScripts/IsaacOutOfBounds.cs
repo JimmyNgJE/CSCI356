@@ -9,6 +9,7 @@ public class IsaacOutOfBounds : MonoBehaviour
     [SerializeField] private string targetTag = "TeleportTrigger"; // Tag for the objects that trigger teleport
     public MapSettingsController mapSettingsController;
     public GameOverController gameOverController;
+    public Health HealthScript;
 
     private CharacterController charController;
 
@@ -23,6 +24,7 @@ public class IsaacOutOfBounds : MonoBehaviour
         // Check if the colliding object has the target tag
         if (other.CompareTag(targetTag))
         {
+            HealthScript.currentHealth = 100;
             TeleportPlayer(teleportTarget.position);
             mapSettingsController.UpdateDeathDisplay();
             gameOverController.ShowYouDieText();
