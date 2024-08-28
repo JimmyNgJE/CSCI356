@@ -12,9 +12,13 @@ public class MeleeCombo : MonoBehaviour
     public float aoeRadius = 5f; // Radius within which damage will be dealt
     public int aoeDamage = 20; // Amount of damage to deal in the radius
 
+    public AudioClip comboSound; // Audio clip for the combo
+    private AudioSource audioSource; // Audio source for playing the sound
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -34,6 +38,12 @@ public class MeleeCombo : MonoBehaviour
         lastComboTime = Time.time;
 
         animator.SetTrigger("Combo");
+
+        // Play the combo sound
+        if (comboSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(comboSound);
+        }
 
         yield return new WaitForSeconds(comboDuration);
 

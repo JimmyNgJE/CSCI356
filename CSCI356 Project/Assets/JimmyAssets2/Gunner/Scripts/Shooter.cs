@@ -11,6 +11,8 @@ public class JimmyShooter : MonoBehaviour
     public float fireRate = 0.5f;
     public int damage = 10;
     public float bulletLifetime = 5.0f; // Time after which the bullet will be destroyed
+    public AudioClip gunshotSound; // Gunshot sound clip
+    private AudioSource gunAudioSource; // Specific AudioSource for the gun
 
     private bool isShooting = false;
 
@@ -20,6 +22,10 @@ public class JimmyShooter : MonoBehaviour
         // Hide the mouse cursor at the centre of screen
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Add and configure the AudioSource for gunshots
+        gunAudioSource = gameObject.AddComponent<AudioSource>();
+        gunAudioSource.clip = gunshotSound;
     }
 
     void OnGUI()
@@ -30,8 +36,8 @@ public class JimmyShooter : MonoBehaviour
         float posX = Screen.width / 2 - size / 4;
         float posY = Screen.height / 2 - size / 2;
 
-        // Displays "*" on screen
-        GUI.Label(new Rect(posX, posY, size, size), "*");
+        // Displays "" on screen
+        GUI.Label(new Rect(posX, posY, size, size), "");
     }
 
     // Update is called once per frame
@@ -71,6 +77,9 @@ public class JimmyShooter : MonoBehaviour
 
         // Destroy the bullet after a certain time
         Destroy(bullet, bulletLifetime);
+
+        // Play the gunshot sound
+        gunAudioSource.Play();
 
         // Raycast to detect what the bullet might hit
         Ray ray = new Ray(bulletSpawnPoint.position, bulletSpawnPoint.forward);

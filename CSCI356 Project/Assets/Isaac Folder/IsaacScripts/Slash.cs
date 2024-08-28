@@ -5,10 +5,18 @@ public class Slash : MonoBehaviour
 {
     public Animator animator;
     public string slashTriggerName = "Slash"; // Name of the trigger parameter in the Animator
-    public int damage = 10; // Damage dealt by each slash
-    public float slashRadius = 2f; // Radius for detecting hits
+    public int damage = 10;                   // Damage dealt by each slash
+    public float slashRadius = 2f;            // Radius for detecting hits
+    public AudioClip slashSound;              // Sound to play when slashing
 
     private bool isAttacking = false;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        // Get or add an AudioSource component
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -21,6 +29,12 @@ public class Slash : MonoBehaviour
     private IEnumerator SlashRoutine()
     {
         isAttacking = true;
+
+        // Play the slash sound
+        if (slashSound != null)
+        {
+            audioSource.PlayOneShot(slashSound);
+        }
 
         // Trigger the slash animation
         animator.SetTrigger(slashTriggerName);

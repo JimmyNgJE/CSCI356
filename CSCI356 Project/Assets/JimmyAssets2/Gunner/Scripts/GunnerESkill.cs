@@ -12,8 +12,17 @@ public class GunnerESkill : MonoBehaviour
     public float pelletLifetime = 5f;      // Time after which the pellet will be destroyed
     public int damage = 50;                // Damage to be dealt
     public GameObject particleSystemPrefab; // Particle effect prefab for hits
+    public AudioClip skillSound; // Skill sound clip
+    private AudioSource skillAudioSource; // Specific AudioSource for the skill
 
     private bool canUseSkill = true;       // To check if the skill is on cooldown
+
+    void Start()
+    {
+        // Add and configure the AudioSource for skill sound
+        skillAudioSource = gameObject.AddComponent<AudioSource>();
+        skillAudioSource.clip = skillSound;
+    }
 
     void Update()
     {
@@ -27,7 +36,10 @@ public class GunnerESkill : MonoBehaviour
     {
         canUseSkill = false;
 
-        // Fire pellets with spread pattern
+        // Play the skill sound
+        skillAudioSource.Play();
+
+        // Fire pellets with a spread pattern
         FirePellets();
 
         // Wait for cooldown to complete
@@ -52,19 +64,6 @@ public class GunnerESkill : MonoBehaviour
             {
                 // Set the velocity of the pellet directly
                 rb.velocity = direction * pelletSpeed;
-
-                // Add a collider if the pellet doesn't have one
-                if (pellet.GetComponent<Collider>() == null)
-                {
-                    Collider collider = pellet.AddComponent<SphereCollider>();
-                    collider.isTrigger = true;
-                }
-
-                // Add a Rigidbody if the pellet doesn't have one
-                if (rb == null)
-                {
-                    rb = pellet.AddComponent<Rigidbody>();
-                }
 
                 // Handle collision detection directly in the script
                 PelletCollision pelletCollision = pellet.AddComponent<PelletCollision>();
