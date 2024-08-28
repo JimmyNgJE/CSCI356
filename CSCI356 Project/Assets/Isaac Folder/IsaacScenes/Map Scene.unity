@@ -12775,6 +12775,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2207555185023817089, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: gameOverController
+      value: 
+      objectReference: {fileID: 1295403950}
+    - target: {fileID: 2207555185023817089, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
+      propertyPath: mapSettingsController
+      value: 
+      objectReference: {fileID: 919638465}
     - target: {fileID: 5693616961199795496, guid: ac61d18329a5edf4b91a00465ca0d86d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -15067,7 +15075,7 @@ GameObject:
   - component: {fileID: 1694086366}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20975,6 +20983,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2571616689231623990, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
+      propertyPath: gameOverController
+      value: 
+      objectReference: {fileID: 1295403950}
+    - target: {fileID: 2571616689231623990, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
+      propertyPath: mapSettingsController
+      value: 
+      objectReference: {fileID: 919638465}
     - target: {fileID: 2911379455013402806, guid: fdf73e38cbefa8d43aa2601b8a92686d, type: 3}
       propertyPath: settingsPopup
       value: 
