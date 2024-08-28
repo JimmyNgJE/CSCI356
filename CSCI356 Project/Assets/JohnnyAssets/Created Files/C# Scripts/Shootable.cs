@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -14,6 +12,8 @@ public class Shootable : MonoBehaviour
     private Canvas canvas;
     private Vector3 initialPosition;
     private Quaternion initialRotation;
+
+    public float fullWidth = 10f;
 
     void Start()
     {
@@ -35,6 +35,7 @@ public class Shootable : MonoBehaviour
         UpdateHPBarPosition();
         UpdateHPBarVisibility();  // New method to handle visibility
         UpdateHPBarFill();
+        UpdateHealthBarWidth();
     }
 
     public void SetHealth(int damage)
@@ -124,5 +125,14 @@ public class Shootable : MonoBehaviour
                 canvasGroup.alpha = 1;
             }
         }
+    }
+    private void UpdateHealthBarWidth()
+    {
+        float healthPercentage = (float)health / 100;
+        float newWidth = fullWidth * healthPercentage;
+
+        // Set the width of the fillRect
+        RectTransform rect = hpBarInstance.transform.Find("Fill Area/Fill").GetComponent<RectTransform>();
+        rect.sizeDelta = new Vector2(newWidth, rect.sizeDelta.y);
     }
 }

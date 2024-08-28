@@ -11,7 +11,9 @@ public class ShootableBoss : MonoBehaviour
     private Canvas canvas;
     private Vector3 initialPosition;
     private Quaternion initialRotation;
+    public GameOverController GameOverController;
 
+    public float fullWidth = 20f;
     void Start()
     {
         initialPosition = transform.position;
@@ -32,6 +34,7 @@ public class ShootableBoss : MonoBehaviour
         UpdateHPBarPosition();
         UpdateHPBarVisibility();  // Handle visibility based on distance to player
         UpdateHPBarFill();  // Update the HP bar fill based on current health
+        UpdateHealthBarWidth();
     }
 
     public void SetHealth(int damage)
@@ -42,6 +45,7 @@ public class ShootableBoss : MonoBehaviour
         if (health <= 0)
         {
             HandleDestruction();
+            GameOverController.OnEnemyDeath(gameObject);
             Destroy(hpBarInstance); // Destroy the HP bar first
             Destroy(gameObject); // Then destroy the boss
             Debug.Log("Boss destroyed.");
@@ -76,7 +80,7 @@ public class ShootableBoss : MonoBehaviour
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 
         // Set the position of the HP bar instance (with a downward offset)
-        hpBarInstance.transform.position = screenPosition - new Vector3(0, 50, 0); // Adjust the offset as needed
+        hpBarInstance.transform.position = screenPosition + new Vector3(0, 50, 0); // Adjust the offset as needed
     }
 
     private void UpdateHPBarFill()
@@ -118,5 +122,14 @@ public class ShootableBoss : MonoBehaviour
                 canvasGroup.alpha = 1;
             }
         }
+    }
+    private void UpdateHealthBarWidth()
+    {
+        float healthPercentage = (float)health / 300;
+        float newWidth = fullWidth * healthPercentage;
+
+        // Set the width of the fillRect
+        RectTransform rect = hpBarInstance.transform.Find("Fill Area/Fill").GetComponent<RectTransform>();
+        rect.sizeDelta = new Vector2(newWidth, rect.sizeDelta.y);
     }
 }
