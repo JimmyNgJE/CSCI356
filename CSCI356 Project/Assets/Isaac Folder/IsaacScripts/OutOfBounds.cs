@@ -2,22 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
-public class IsaacOutOfBounds : MonoBehaviour
+public class OutOfBounds : MonoBehaviour
 {
     [SerializeField] private Transform teleportTarget; // The target location to teleport to
     [SerializeField] private string targetTag = "TeleportTrigger"; // Tag for the objects that trigger teleport
     public MapSettingsController mapSettingsController;
     public GameOverController gameOverController;
-    public Health HealthScript;
 
     private CharacterController charController;
 
     void Start()
     {
-        HealthScript = FindObjectOfType<Health>();
-        // Get the CharacterController component
         charController = GetComponent<CharacterController>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,9 +22,7 @@ public class IsaacOutOfBounds : MonoBehaviour
         // Check if the colliding object has the target tag
         if (other.CompareTag(targetTag))
         {
-            HealthScript.currentHealth = HealthScript.maxHealth;
-            //TeleportPlayer(teleportTarget.position);
-            
+            TeleportPlayer(teleportTarget.position);
         }
     }
 
@@ -35,8 +30,8 @@ public class IsaacOutOfBounds : MonoBehaviour
     {
         if (charController != null)
         {
-            //mapSettingsController.UpdateDeathDisplay();
-            //gameOverController.ShowYouDieText();
+            mapSettingsController.UpdateDeathDisplay();
+            gameOverController.ShowYouDieText();
             charController.enabled = false; // Disable the CharacterController
             transform.position = newPosition; // Teleport to the new position
             charController.enabled = true; // Re-enable the CharacterController
