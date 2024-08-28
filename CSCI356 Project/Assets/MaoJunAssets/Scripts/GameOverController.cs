@@ -19,10 +19,9 @@ public class GameOverController : MonoBehaviour
     private bool enemy1Dead = false;
     private bool enemy2Dead = false;
     private bool enemy3Dead = false;
-    private int BossRemaining = 3;
     void Start()
     {
-        WINPopup.enabled = false;
+        WINPopup.gameObject.SetActive(false);
         youDieText.enabled = false; // Ensure the text is initially hidden
     }
 
@@ -60,11 +59,11 @@ public class GameOverController : MonoBehaviour
     }
     public void UpdateBossRemainingDisplay()
     {
-        BossRemaining -= 1;
         if (BossRemainingText != null)
         {
+            int trueCount = CountTrueBooleans(enemy1Dead, enemy2Dead, enemy3Dead);
             // Update the UI text based on the death value
-            BossRemainingText.text = $"BossRemaining: {BossRemaining}";
+            BossRemainingText.text = $"BossRemaining: {3-trueCount}";
         }
     }
     // Check if all enemies are dead
@@ -73,7 +72,8 @@ public class GameOverController : MonoBehaviour
         if (enemy1Dead && enemy2Dead && enemy3Dead)
         {
             Debug.Log("All enemies are dead. You win!");
-            WINPopup.enabled = true;
+            WINPopup.gameObject.SetActive(true);
+
             // Update the UI text based on the death value
             deathText.text = $"Death: {MapSettingsController.death}";
             if (MapSettingsController.death == 0)
@@ -82,6 +82,20 @@ public class GameOverController : MonoBehaviour
             }else if (MapSettingsController.death <= 2) { Rating.text = "A"; }
             else if (MapSettingsController.death <= 4) { Rating.text = "B"; }
             else { Rating.text = "C"; }
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
+    }
+    int CountTrueBooleans(params bool[] booleans)
+    {
+        int count = 0;
+        foreach (bool b in booleans)
+        {
+            if (b)
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
