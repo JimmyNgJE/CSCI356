@@ -397,6 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   destructionEffectPrefab: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
+  hpBarPrefab: {fileID: 5101818742799157168, guid: 1d1dfb8b0c039ae4f9010374d90b744c, type: 3}
 --- !u!114 &7483309342197488705
 MonoBehaviour:
   m_ObjectHideFlags: 0

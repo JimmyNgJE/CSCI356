@@ -3,7 +3,9 @@ guid: 51c55cd4c682eee4ebb2c6015cffb1f2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - destructionEffectPrefab: {instanceID: 0}
+  - hpBarPrefab: {fileID: 5101818742799157168, guid: 1d1dfb8b0c039ae4f9010374d90b744c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
