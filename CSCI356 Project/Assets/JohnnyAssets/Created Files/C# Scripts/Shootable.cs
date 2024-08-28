@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Shootable : MonoBehaviour
@@ -91,6 +92,8 @@ public class Shootable : MonoBehaviour
         {
             Image hpBarFill = hpBarInstance.transform.Find("Fill Area/Fill").GetComponent<Image>();
             hpBarFill.fillAmount = (float)health / 100; // Assuming the full health is 100
+            TMP_Text healthText = hpBarInstance.transform.Find("Health Text").GetComponent<TMP_Text>();
+            healthText.text = $"{health}/100";
         }
     }
 

@@ -25,6 +25,25 @@ public class Wander : MonoBehaviour
         // Find the active player object by tag
         player = GameObject.FindGameObjectWithTag("Player").transform;
         timer = wanderTimer;
+        // Adjust shooting interval based on difficulty
+        if (GameSelect2.Instance != null) {
+            switch (GameSelect2.Instance.SelectedDifficulty)
+            {
+                case "Easy":
+                    shootingInterval = 2f; // Longer interval for easy difficulty
+                    break;
+                case "Normal":
+                    shootingInterval = 1f; // Moderate interval for normal difficulty
+                    break;
+                case "Hard":
+                    shootingInterval = 0.5f; // Shorter interval for hard difficulty
+                    break;
+                default:
+                    shootingInterval = 2f; // Default to easy if difficulty is not recognized
+                    break;
+            }
+
+        }
     }
 
     void Update()
