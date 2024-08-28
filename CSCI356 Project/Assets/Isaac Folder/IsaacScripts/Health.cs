@@ -5,12 +5,15 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    //public TeleportationScript teleportationScript;
+    [SerializeField] private Transform teleportTarget;
     public MapSettingsController mapSettingsController;
     public GameOverController gameOverController;
+
+    private CharacterController charController;
     void Start()
     {
         currentHealth = maxHealth;
+        charController = GetComponent<CharacterController>();
     }
 
     public void Heal(int amount)
@@ -28,11 +31,21 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            //currentHealth = 100;
+            currentHealth = 100;
             mapSettingsController.UpdateDeathDisplay();
             gameOverController.ShowYouDieText();
-
+            TeleportPlayer(teleportTarget.position);
         }
         Debug.Log("Current Health: " + currentHealth);
+    }
+
+    private void TeleportPlayer(Vector3 newPosition)
+    {
+        if (charController != null)
+        {
+            charController.enabled = false; // Disable the CharacterController
+            transform.position = newPosition; // Teleport to the new position
+            charController.enabled = true; // Re-enable the CharacterController
+        }
     }
 }
