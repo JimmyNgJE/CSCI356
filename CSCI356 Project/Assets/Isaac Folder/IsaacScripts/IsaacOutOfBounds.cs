@@ -24,7 +24,7 @@ public class IsaacOutOfBounds : MonoBehaviour
         // Check if the colliding object has the target tag
         if (other.CompareTag(targetTag))
         {
-            HealthScript.currentHealth = 100;
+            HealthScript.currentHealth = HealthScript.maxHealth;
             TeleportPlayer(teleportTarget.position);
             mapSettingsController.UpdateDeathDisplay();
             gameOverController.ShowYouDieText();
